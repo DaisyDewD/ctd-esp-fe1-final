@@ -27,7 +27,7 @@ const episodiosReducer: Reducer<EpisodiosState, EpisodiosActions> = (
   action
 ): EpisodiosState => {
   switch (action.type) {
-    case "GET_EPISODES":
+    case "GET_EPISODIOS":
       return {
         ...state,
         status: "LOADING",
@@ -40,7 +40,7 @@ const episodiosReducer: Reducer<EpisodiosState, EpisodiosActions> = (
         status: "COMPLETED",
         episodios: action.episodios,
       };
-    case "GET_EPISODES_ERROR":
+    case "GET_EPISODIOS_ERROR":
       return {
         ...state,
         status: "FAILED",

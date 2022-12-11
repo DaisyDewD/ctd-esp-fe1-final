@@ -10,7 +10,7 @@ interface getPersonajesAccion extends Action {
 }
 interface getPersonajesSuccessAccion extends Action {
   type: "GET_PERSONAJES_SUCCESS";
-  Personajes: Personaje[];
+  personajes: Personaje[];
   pageInfo: PageInfo;
 }
 interface getPersonajesErrorAccion extends Action {
@@ -45,7 +45,7 @@ const getPersonajesError: ActionCreator<getPersonajesErrorAccion> = (
   };
 };
 
-export type CharacterActions =
+export type PersonajeActions =
   | ReturnType<typeof getPersonajes>
   | ReturnType<typeof getPersonajesSuccess>
   | ReturnType<typeof getPersonajesError>;

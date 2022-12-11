@@ -3,7 +3,7 @@ import { fetchEpisodios } from "../services/personaje.services";
 import { IRootState } from "../store/store";
 import Episodio from "../types/episodio.types";
 
-interface getEpisodesAccion extends Action {
+interface getEpisodiosAccion extends Action {
   type: "GET_EPISODIOS";
   query: string;
 }
@@ -41,7 +41,7 @@ const getEpisodiosError: ActionCreator<getEpisodiosErrorAccion> = (
   };
 };
 
-export type EpisodesActions =
+export type EpisodiosActions =
   | ReturnType<typeof getEpisodios>
   | ReturnType<typeof getEpisodiosSuccess>
   | ReturnType<typeof getEpisodiosError>;

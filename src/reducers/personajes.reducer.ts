@@ -32,7 +32,7 @@ const personajesReducer: Reducer<PersonajesState, PersonajeActions> = (
   action
 ): PersonajesState => {
   switch (action.type) {
-    case "GET_CHARACTERS":
+    case "GET_PERSONAJES":
       return {
         ...state,
         status: "LOADING",
@@ -40,14 +40,14 @@ const personajesReducer: Reducer<PersonajesState, PersonajeActions> = (
         query: action.query,
         error: null,
       };
-    case "GET_CHARACTERS_SUCCESS":
+    case "GET_PERSONAJES_SUCCESS":
       return {
         ...state,
         status: "COMPLETED",
         personajes: action.personajes,
         pageInfo: action.pageInfo,
       };
-    case "GET_CHARACTERS_ERROR":
+    case "GET_PERSONAJES_ERROR":
       return {
         ...state,
         status: "FAILED",

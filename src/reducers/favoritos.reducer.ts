@@ -15,7 +15,7 @@ const favoritosReducer: Reducer<StateFavoritos, FavoritoActions> = (
   action
 ): StateFavoritos => {
   switch (action.type) {
-    case "TOGGLE_FAVORITE":
+    case "TOGGLE_FAVORITO":
       const map = new Map<number, Personaje>();
       state.favoritosMapa.forEach((personaje) => {
         map.set(personaje.id, personaje);
@@ -29,7 +29,7 @@ const favoritosReducer: Reducer<StateFavoritos, FavoritoActions> = (
         favoritosMapa: map,
       };
 
-    case "REMOVE_ALL_FAVORITE":
+    case "REMOVE_ALL_FAVORITO":
       return {
         ...initialState,
       };

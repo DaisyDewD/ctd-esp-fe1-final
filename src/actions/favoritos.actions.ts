@@ -2,12 +2,12 @@ import { Action, ActionCreator } from "@reduxjs/toolkit";
 import Personaje from "../types/personaje.types";
 
 interface FavoritoAction extends Action {
-  type: "TOGGLE_FAVORITE";
+  type: "TOGGLE_FAVORITO";
   personaje: Personaje;
 }
 
 interface FavoritoRemoveAllAction extends Action {
-  type: "REMOVE_ALL_FAVORITE";
+  type: "REMOVE_ALL_FAVORITO";
 }
 
 export const toggleFavorito: ActionCreator<FavoritoAction> = (
@@ -20,9 +20,9 @@ export const toggleFavorito: ActionCreator<FavoritoAction> = (
 export const removeAllFavorito: ActionCreator<
   FavoritoRemoveAllAction
 > = () => ({
-  type: "REMOVE_ALL_FAVORITE",
+  type: "REMOVE_ALL_FAVORITO",
 });
 
-export type FavoriteActions =
+export type FavoritoActions =
   | ReturnType<typeof toggleFavorito>
   | ReturnType<typeof removeAllFavorito>;
