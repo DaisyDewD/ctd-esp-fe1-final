@@ -6,6 +6,7 @@ import PaginaFavoritos from "./paginas/Favoritos.pagina";
 import PaginaDetalle from "./paginas/Detalle.pagina";
 import Encabezado from "./componentes/layout/encabezado.componente";
 import {Provider} from "react-redux";
+import { store } from "./store/store";
 
 function App() {
   return (
