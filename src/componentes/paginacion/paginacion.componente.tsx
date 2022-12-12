@@ -16,8 +16,8 @@ import { IRootState } from "../../store/store";
     const useSelector: TypedUseSelectorHook<IRootState> = useReduxSelector;
     const dispatch = useDispatch();
   
-    const pageInfo = useSelector((state) => state.personajes.pageInfo);
-    const { count, next, pages, prev } = pageInfo;
+    const paginaInfo = useSelector((state) => state.personajes.paginaInfo);
+    const { count, next, pages, prev } = paginaInfo;
   
     const previusPage = () => {
       dispatch(changePageThunk(prev));
@@ -28,7 +28,7 @@ import { IRootState } from "../../store/store";
     };
   
     return (
-      <div className="pagination">
+      <div className="paginacion">
         <button
           onClick={previusPage}
           disabled={prev === null ? true : false}

@@ -23,7 +23,7 @@ const GrillaPersonajes: FunctionComponent = () => {
     if (!personajes || personajes.length === 0) return <></>;
   
     return (
-      <div className="grid-personajes">
+      <div className="grilla-personajes">
         {personajes.map((personaje) => {
           return (
             <div key={personaje.id}>

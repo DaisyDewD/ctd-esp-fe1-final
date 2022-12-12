@@ -1,7 +1,7 @@
 import { Action, ActionCreator, ThunkAction } from "@reduxjs/toolkit";
 import { getPersonajesAPI, changePage } from "../services/personaje.services";
 import { IRootState } from "../store/store";
-import PageInfo from "../types/pageInfo.types";
+import PaginaInfo from "../types/paginaInfo.types";
 import Personaje from "../types/personaje.types";
 
 interface getPersonajesAccion extends Action {
@@ -11,7 +11,7 @@ interface getPersonajesAccion extends Action {
 interface getPersonajesSuccessAccion extends Action {
   type: "GET_PERSONAJES_SUCCESS";
   personajes: Personaje[];
-  pageInfo: PageInfo;
+  paginaInfo: PaginaInfo;
 }
 interface getPersonajesErrorAccion extends Action {
   type: "GET_PERSONAJES_ERROR";
@@ -27,12 +27,12 @@ const getPersonajes: ActionCreator<getPersonajesAccion> = (query: string) => {
 
 const getPersonajesSuccess: ActionCreator<getPersonajesSuccessAccion> = (
   personajes: Personaje[],
-  pageInfo: PageInfo
+  paginaInfo: PaginaInfo
 ) => {
   return {
     type: "GET_PERSONAJES_SUCCESS",
     personajes: personajes,
-    pageInfo: pageInfo,
+    paginaInfo: paginaInfo,
   };
 };
 

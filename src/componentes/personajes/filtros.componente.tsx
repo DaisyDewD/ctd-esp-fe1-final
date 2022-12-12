@@ -20,14 +20,14 @@ import { IRootState } from "../../store/store";
     };
   
     return (
-      <div className="filters">
-        <label htmlFor="filter">Filtrar por nombre:</label>
+      <div className="filtros">
+        <label htmlFor="filtro">Filtrar por nombre:</label>
         <input
           type="text"
           placeholder="Rick, Morty, Smith, Mr. Meeseeks, etc..."
           onChange={onChange}
           value={query}
-          name="filter"
+          name="filtros"
           autoFocus={true}
         />
       </div>

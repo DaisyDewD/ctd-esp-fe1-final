@@ -9,7 +9,7 @@ interface Personaje {
         name: string,
         url: string
     }
-    episodio: string[];
+    episode: string[];
 }
 
 export default Personaje;

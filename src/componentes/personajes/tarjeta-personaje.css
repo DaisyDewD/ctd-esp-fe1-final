@@ -1,6 +1,8 @@
 .tarjeta-personaje {
   display: flex;
   flex-direction: column;
+  min-height: 363px;
+  min-width: 302px;
 }
 
 .tarjeta-personaje > img {
@@ -9,6 +11,7 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border: 1px solid #d0d0d0;
+  cursor: pointer;
 }
 
 .tarjeta-personaje > div.tarjeta-personaje-body {

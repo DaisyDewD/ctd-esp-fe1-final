@@ -1,16 +1,16 @@
-import Episode from "../types/episodio.types";
-import PageInfo from "../types/pageInfo.types";
+import Episodio from "../types/episodio.types";
+import PaginaInfo from "../types/paginaInfo.types";
 import Personaje from "../types/personaje.types";
 
 /**
  * Function that returns all the charecters per page and filtered by name if this is required.
  *
  * @param {string | undefined} name
- * @returns {Promise<[Personaje[], PageInfo, number] | [any, any, number]>} returns characters and info
+ * @returns {Promise<[Personaje[], PaginaInfo, number] | [any, any, number]>} returns characters and info
  */
 export const getPersonajesAPI = async (
   name?: string
-): Promise<[Personaje[], PageInfo, number] | [any, any, number]> => {
+): Promise<[Personaje[], PaginaInfo, number] | [any, any, number]> => {
   let nameParam = "";
   if (name !== "" && name !== undefined) {
     nameParam = `name=${name}`;
@@ -28,11 +28,11 @@ export const getPersonajesAPI = async (
  *  Function that returns characters per page.
  *
  * @param {string }url
- * @returns {Promise<[Personaje[], PageInfo]>} returns characters and info
+ * @returns {Promise<[Personaje[], PaginaInfo]>} returns characters and info
  */
 export const changePage = async (
   url: string
-): Promise<[Personaje[], PageInfo]> => {
+): Promise<[Personaje[], PaginaInfo]> => {
   return fetch(url)
     .then((data) => data.json())
     .then((data) => [data.results, data.info]);
@@ -46,7 +46,7 @@ export const changePage = async (
  */
 export const fetchEpisodios = async (
   arrayEpisodioID: (string | undefined)[]
-): Promise<Episode | Episode[]> => {
+): Promise<Episodio | Episodio[]> => {
   return (
     await fetch(`https://rickandmortyapi.com/api/episode/${arrayEpisodioID}`)
   ).json();

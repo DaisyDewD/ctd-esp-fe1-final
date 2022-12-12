@@ -2,8 +2,8 @@ interface Episodio {
     id: number;
     name: string;
     air_date: string;
-    episodio: string;
-    personajes: string[];
+    episode: string;
+    characters: string[];
 }
 
 export default Episodio;

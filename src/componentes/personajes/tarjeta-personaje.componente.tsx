@@ -17,20 +17,20 @@ import { useNavigate } from 'react-router-dom';
     let navigate = useNavigate();
   
     /**
-     * Function that redirect the user to the detail page when clicks on the character image
+     * Función que dirige al usuario a la pagina de detalle cuando da click en la imagen del personaje
      */
-    const redirectToDetailPage = () => {
-      navigate(`/detail/${personaje.id}`, { state: { personaje: personaje } });
+    const directToPaginaDetalle = () => {
+      navigate(`/detalle/${personaje.id}`, { state: { personaje: personaje } });
     };
   
     return (
       <div className="tarjeta-personaje">
         <img
           src={personaje.image}
-          onClick={redirectToDetailPage}
+          onClick={directToPaginaDetalle}
           alt={personaje.name}
         />
-        <div className="card-personaje-body">
+        <div className="tarjeta-personaje-body">
           <span>{personaje.name}</span>
           <BotonFavorito personaje={personaje} />
         </div>

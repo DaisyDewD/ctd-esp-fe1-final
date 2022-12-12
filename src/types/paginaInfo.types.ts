@@ -1,8 +1,8 @@
-interface PageInfo {
+interface PaginaInfo {
   count: number;
   pages: number;
   next: string;
   prev: string;
 }
 
-export default PageInfo;
+export default PaginaInfo;

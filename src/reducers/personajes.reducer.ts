@@ -1,13 +1,13 @@
 import { Reducer } from "@reduxjs/toolkit";
 import { PersonajeActions } from "../actions/personajes.actions";
-import PageInfo from "../types/pageInfo.types";
+import PaginaInfo from "../types/paginaInfo.types";
 import Personaje from "../types/personaje.types";
 
 interface PersonajesState {
   status: "IDLE" | "LOADING" | "COMPLETED" | "FAILED";
   personajes: Personaje[];
   query: string;
-  pageInfo: PageInfo;
+  paginaInfo: PaginaInfo;
   error: string | number | null;
 }
 
@@ -15,7 +15,7 @@ const initialState: PersonajesState = {
   status: "IDLE",
   personajes: [],
   query: "",
-  pageInfo: { count: 0, pages: 0, next: "", prev: "" },
+  paginaInfo: { count: 0, pages: 0, next: "", prev: "" },
   error: null,
 };
 
@@ -45,7 +45,7 @@ const personajesReducer: Reducer<PersonajesState, PersonajeActions> = (
         ...state,
         status: "COMPLETED",
         personajes: action.personajes,
-        pageInfo: action.pageInfo,
+        paginaInfo: action.paginaInfo,
       };
     case "GET_PERSONAJES_ERROR":
       return {
