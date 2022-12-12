@@ -2,7 +2,7 @@ import './filtros.css';
 import { ChangeEvent, FunctionComponent } from "react";
 import { TypedUseSelectorHook, useDispatch, useSelector as useReduxSelector,} from "react-redux";
 import { fetchPersonajesThunk } from "../../actions/personajes.actions";
-import { IRootState } from "../../store/store";
+import { IRootState } from "../../redux/store";
 
 /**
  * Componente filtrar personajes

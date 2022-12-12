@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import {TypedUseSelectorHook, useDispatch, useSelector as useReduxSelector,} from "react-redux";
 import TarjetaPersonaje from "../componentes/personajes/tarjeta-personaje.componente";
-import { IRootState } from "../store/store";
+import { IRootState } from "../redux/store";
 import { removeAllFavorito } from "../actions/favoritos.actions";
 
 /**

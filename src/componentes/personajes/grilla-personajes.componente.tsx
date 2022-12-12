@@ -2,7 +2,7 @@ import './grilla-personajes.css';
 import TarjetaPersonaje from './tarjeta-personaje.componente';
 import { FunctionComponent, useEffect } from "react";
 import {TypedUseSelectorHook, useDispatch, useSelector as useReduxSelector } from "react-redux";
-import { IRootState } from "../../store/store";
+import { IRootState } from "../../redux/store";
 import { fetchPersonajesThunk } from "../../actions/personajes.actions";
 
 /**

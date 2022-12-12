@@ -1,6 +1,6 @@
 import './boton-favorito.css';
 import { FunctionComponent } from "react";
-import { IRootState } from "../../store/store";
+import { IRootState } from "../../redux/store";
 import Personaje from "../../types/personaje.types";
 import { toggleFavorito } from "../../actions/favoritos.actions";
 import {TypedUseSelectorHook,useDispatch,useSelector as useReduxSelector,} from "react-redux";

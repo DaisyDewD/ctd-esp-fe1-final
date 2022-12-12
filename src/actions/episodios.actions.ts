@@ -1,6 +1,6 @@
 import { Action, ActionCreator, ThunkAction } from "@reduxjs/toolkit";
 import { fetchEpisodios } from "../services/personaje.services";
-import { IRootState } from "../store/store";
+import { IRootState } from "../redux/store";
 import Episodio from "../types/episodio.types";
 
 interface getEpisodiosAccion extends Action {

@@ -2,7 +2,7 @@ import './paginacion.css';
 import { FunctionComponent, useState } from "react";
 import {TypedUseSelectorHook, useDispatch, useSelector as useReduxSelector,} from "react-redux";
 import { changePageThunk } from "../../actions/personajes.actions";
-import { IRootState } from "../../store/store";
+import { IRootState } from "../../redux/store";
 
 /**
  * Componente que contiene los botones para paginar

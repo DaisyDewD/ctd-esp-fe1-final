@@ -1,6 +1,6 @@
 import { Action, ActionCreator, ThunkAction } from "@reduxjs/toolkit";
 import { getPersonajesAPI, changePage } from "../services/personaje.services";
-import { IRootState } from "../store/store";
+import { IRootState } from "../redux/store";
 import PaginaInfo from "../types/paginaInfo.types";
 import Personaje from "../types/personaje.types";
 

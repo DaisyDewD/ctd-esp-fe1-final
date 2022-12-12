@@ -4,7 +4,7 @@ import TarjetaEpisodio from "../componentes/episodios/tarjeta-episodio.component
 import { useLocation } from "react-router-dom";
 import { TypedUseSelectorHook, useDispatch, useSelector as useReduxSelector,} from "react-redux";
 import Personaje from "../types/personaje.types";
-import { IRootState } from "../store/store";
+import { IRootState } from "../redux/store";
 import { FunctionComponent, useEffect, useState } from "react";
 import Episodio from "../types/episodio.types";
 import { getEpisodiosThunk } from "../actions/episodios.actions";
