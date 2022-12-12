@@ -14,17 +14,22 @@
     margin-left: 30px;
     font-size: 26px;
     font-weight: 500;
+   
 
 }
 
 .detalle-header-texto p{
     margin-top: 0;
     margin-bottom: 10px;
+
+    
 }
 
 
 .detalle-header-texto p:nth-child(1){
     font-size: 32px;
+    font-weight: 600;
+    color: rgb(11, 220, 18);
 }
 
 .episodios-grilla {

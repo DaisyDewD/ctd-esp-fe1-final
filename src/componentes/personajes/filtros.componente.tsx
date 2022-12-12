@@ -24,7 +24,7 @@ import { IRootState } from "../../store/store";
         <label htmlFor="filtro">Filtrar por nombre:</label>
         <input
           type="text"
-          placeholder="Rick, Morty, Smith, Mr. Meeseeks, etc..."
+          placeholder="Rick, Morty, Scary, Snake, Mr. Meeseeks, etc..."
           onChange={onChange}
           value={query}
           name="filtros"
